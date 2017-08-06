@@ -1,0 +1,49 @@
+.wrap{
+    position: absolute;
+    top:20%;
+    left:40%;
+    background-color: white;
+    width:480px;
+    height:400px;
+    text-align: center;
+    box-shadow: 4px 4px 4px 4px lightgray;
+    padding-top:30px;
+}
+input{
+    border: none;
+    outline: none;
+    width:450px;
+    height:70px;
+    background-color: rgb(246,246,246);
+    margin-bottom:30px;
+    font-size:20px;
+    font-weight: lighter;
+    padding-left:20px;
+}
+input:focus{
+    background-color: lightgray;
+}
+.password{
+    text-align: right;
+    margin-bottom:30px;
+    padding-right:10px;
+}
+.password a{
+    text-decoration: none;
+    color:rgb(29,162,119);
+}
+.password a:hover{
+    color:green;
+}
+.login{
+    text-align: center;
+    width:460px;
+    height:70px;
+    margin: 0 auto;
+    background-color:rgb(29,162,119) ;
+    line-height: 70px;
+}
+
+.login:hover{
+    background-color: green;
+}
