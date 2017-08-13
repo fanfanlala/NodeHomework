@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>my知乎</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="node_modules/react/dist/react.js"></script>
+    <script src="node_modules/react-dom/dist/react-dom.js"></script>
+    <script src="node_modules/babel-standalone/babel.js"></script>
+    <script src="jquery-1.11.2.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+    var readWoldArr = [ '「我爱你，但你必须听我的」',
+        '再见了，暴雪电影部，我要去北京做中国动画了',
+        '铁甲、机器人，为什么这类动画和电影总是让我们着迷？',
+        'iPhone 8 会有新的配色吗？',
+        '被你当做「性启蒙读物」的《金瓶梅》，历史地位可是相当高',
+        '你最喜欢的商场都长什么样？',
+        '瞎扯 · 如何正确地吐槽',
+        '小事 · 爸爸去世之后',
+        '摇滚青年陈佩斯，奇怪吗？其实一点都不奇怪',
+        '一盘酸辣爽口又劲道的凉面，夏天恨不得每天都拌来吃',
+        '小时候去新华书店花 10 块钱买的游戏光盘，竟然是「伪正版」',
+        '环游一次世界要花多少钱？73 万，这是我们帮你算出的账',
+        '遣返「格斗孤儿」回凉山，等待他们的只有毒品、艾滋和贫穷',
+        '这个玩钢镚儿小游戏，玩着玩着就解释了一个社会问题',
+        '国内最常见的普通楼房，原来是「社会主义审美」',
+        '别再问年轻人凭什么不加班了，加班就等于努力工作吗？',
+        '为什么各种宗教都有那么多禁忌？',
+        '大误 · 可能是最适合中国人减肥的文章',
+        '彩虹有没有倒影？',
+        '多少级的地震可以撼动全球？',
+        '朋友圈一篇「癌症最强科普文」传得够广，但别全信了',
+        '终于可以回答「生吃带鱼是什么样的感受」了',
+        '《权力的游戏》中的灰鳞病现实中真的存在吗？',
+        '「在职场中交不到朋友才正常」，这话其实没错',
+        '「香港爆发史无前例大流感，超过 SARS」……等等，别慌',
+        '瞎扯 · 如何正确地吐槽',
+        '这里是广告 · 将巴萨精髓注入手机设计是一种怎样的体验？',
+        '小事 · 但愿人长久，千里共饺子',
+        '真奇怪，有些电影你没那么喜欢却一看再看',
+        '「儿子你看，这就是爸爸的青春、热情和梦想」' ]
+
+    class Header extends React.Component{
+        render(){
+            return (
+                    <div className="header">
+                    <div className="container ">
+                        <div className="left header-left"><a href="http://localhost:63342/11.zhihu/index.html?_ijt=jau36v2dpnrl13rniamfl6kpec" target="_Blank"><img src="image/top_logo.png" className="topLogo"/></a></div>
+                        <div className="right">
+                            <a href="#" className="app">App&nbsp;下载</a>
+                            <a href="#" className="read" >浏览内容</a>
+                        </div>
+                    </div>
+                    </div>
+            )
+        }
+    }
+
+    class Content extends React.Component{
+        render(){
+            return(
+                    <div className="section">
+                        <div className="container">
+                            <div className="left">
+                                <img src="image/phone_sample.png" className="phone"/>
+                            </div>
+                            <div className="right section-right">
+                                <img src="image/slogan.png"/>
+                                <p className="section-word">在中国，资讯类移动应用的人均阅读时长是 5 分钟，而在知乎日报，这个数字是 21。</p>
+                                <div className="phoneTitle">
+                                    <div className="section-img left">
+                                        <img src="image/qr_bottom.png"/>
+                                    </div>
+                                    <div className="right phoneAll">
+                                        <a href="#" className="IOSPhone"><img src="image/iphone_logo.png" className="left"/><span className="left">iOS版</span></a>
+                                        <div className="APhone">
+                                        <a href="#"><img src="image/android_logo.png"  className="left"/><span className="left">Android版</span></a>
+                                        <div className="hiddenPhone">
+                                            <a href="#"><img src="image/icon_wandoujia.png"  className="left"/><span className="left">豌豆荚</span></a>
+                                            <a href="#"><img src="image/icon_91market.png"  className="left"/><span className="left">91市场</span></a>
+                                            <a href="#"><img src="image/icon_360market.png"  className="left"/><span className="left">360市场</span></a>
+
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            )
+        }
+    }
+
+     function  createRead() {
+        var readArr= [];
+        for(var i = 0; i < 30; i++){
+            readArr.push(<div className="readImg">
+                <img src={'image/'+i+'.jpg'}/>
+                <div className="readImgWold">{readWoldArr[i]}</div>
+            </div>)
+
+        }
+        return readArr;
+    }
+
+    class Reading extends React.Component{
+        render(){
+            return(
+                    <div className="container">
+                        <div className="readTitle">
+                            <span className="left">浏览内容</span>
+                            <span className="right">最新内容</span>
+                        </div>
+                        {createRead()}
+                    </div>
+            )
+        }
+    }
+
+    class Footer extends React.Component{
+        render(){
+            return(
+                <div>
+                    <div className="container footMore">
+                        <a href="#">更多精彩内容可在知乎报应用中查看</a>
+                    </div>
+                    <div className="topFoot">
+                        <div className="container">
+                           <div className="left footWold">
+                               <p>知乎日报是一款拥有千万用户的资讯类客户端，每日提供来自知乎社区的精选问答，还有国内一流媒体的专栏特稿。</p>
+                               <p>主题日报包括动漫、设计、大公司、游戏、财经、电影、电子音乐、互联网安全等丰富内容，为业内人和资深爱好
+                                   者推荐各领域最精彩文章，满足高质量阅读需求。</p>
+                               <p>在知乎日报，告别浮躁，重获阅读的愉悦。</p>
+                               <p>© 2017 知乎</p>
+                           </div>
+                            <div className="right footRight">
+                                <div className="footImg">
+                                <img src="image/bottom.png"/>
+                                </div>
+                                <p>扫描下载客户端</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        )
+        }
+    }
+
+
+    class Wrap extends React.Component{
+        render(){
+            return(
+                    <div>
+                        <Header/>
+                        <Content/>
+                        <Reading/>
+                        <Footer/>
+                    </div>
+            )
+        }
+    }
+
+    ReactDOM.render(
+            <Wrap/>,
+            document.getElementById('root')
+    )
+
+
+    //点击app下载和点击浏览内容
+    $('.app').click(function () {
+        $('.app').css({'color':'rgb(14,119,237)','backgroundColor':'rgb(237,247,255)'})
+
+        $('.read').css({'color':'black','backgroundColor':'rgb(255,255,255)'})
+    })
+    $('.read').click(function () {
+        $('.read').css({'color':'rgb(14,119,237)','backgroundColor':'rgb(237,247,255)'})
+        $('.app').css({'color':'black','backgroundColor':'rgb(255,255,255)'})
+    })
+
+
+
+</script>
+</body>
+</html>

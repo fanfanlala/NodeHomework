@@ -1,0 +1,181 @@
+* {
+    margin:0;
+    padding:0;
+}
+body{
+    background-color: rgb(247,247,247);
+}
+.container{
+    width:960px;
+    margin:0 auto;
+}
+
+.container::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+.left{
+    float:left;
+}
+.right{
+    float: right;
+}
+
+/*头部*/
+.header{
+    height:76px;
+    line-height: 76px;
+    background-color: rgb(255,255,255);
+}
+.topLogo{
+    margin-top:10px;
+}
+
+.app,.read{
+    text-decoration: none;
+    font-size: 15px;
+    color:black;
+    padding:5px 30px;
+    border-radius: 4px;
+}
+.app{
+    color:rgb(14,119,237);
+    background-color: rgb(237,247,255);
+}
+.read{
+    margin-left:30px;
+}
+
+/*第二部分手机*/
+.section{
+    background-color:#008bed ;
+    height:460px;
+    position: relative;
+}
+.section-right{
+    margin-top:30px;
+    position: absolute;
+    right:60px;
+    top:70px;
+}
+.section-word{
+    width:400px;
+    color:lightgray;
+    margin-bottom:60px;
+}
+.phone{
+    position: absolute;
+    bottom:0;
+    left:140px;
+}
+.section-img{
+    width:145px;
+    height:153px;
+    background-color: rgb(255,255,255);
+    text-align: center;
+}
+.section-img img{
+    margin-top:10px;
+}
+.phoneAll a{
+    text-decoration: none;
+    color:black;
+    background-color: rgb(255,255,255);
+    display: block;
+    padding:5px 25px;
+
+    overflow: hidden;
+}
+.IOSPhone{
+    margin-bottom:30px;
+    border-radius: 3px;
+}
+
+.phoneAll a span{
+
+    display: inline-block;
+    margin-top:15px;
+    margin-left:20px;
+}
+.phoneAll a:hover{
+    background-color: lightgray;
+}
+
+.hiddenPhone{
+    display: none;
+}
+.APhone:hover .hiddenPhone{
+    display: block;
+}
+
+
+/*浏览内容*/
+.readTitle{
+    height:98px;
+    line-height: 98px;
+}
+.readTitle span{
+    font-size: 30px;
+}
+.readTitle span:nth-child(2){
+    color:lightgray;
+}
+.readImg{
+    width:300px;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-right:20px;
+    background-color: rgb(255,255,255);
+}
+.readImg img{
+    width:260px;
+    height:260px;
+    margin:20px;
+}
+.readImgWold{
+    width:260px;
+    margin:0 20px 20px 20px;
+}
+
+/*底部*/
+.footMore{
+    background-color: rgb(227,234,239);
+    text-align: center;
+    margin:20px auto;
+}
+.footMore a{
+    text-decoration: none;
+    color:rgb(19,64,105);
+    height:60px;
+    line-height: 60px;
+    font-size: 20px;
+}
+
+.topFoot{
+    height: 265px;
+    background-color:rgb(223,223,223) ;
+}
+.footWold{
+    width:715px;
+    margin-top:40px;
+}
+.footWold p{
+    margin-bottom: 15px;
+    color:black;
+}
+.footRight{
+    margin-top:40px;
+}
+.footImg{
+    width:155px;
+    height:155px;
+    background-color: rgb(255,255,255);
+}
+.footImg img{
+    margin:10px;
+}
+.footRight p{
+   text-align: center;
+    margin-top:15px;
+}
